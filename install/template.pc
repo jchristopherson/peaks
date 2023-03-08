@@ -1,0 +1,10 @@
+prefix = @CMAKE_INSTALL_PREFIX@
+libdir = ${prefix}/@CMAKE_INSTALL_FULL_LIBDIR@
+includedir = ${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+
+Name: @PROJECT_NAME@
+Description: PEAKS is a peak detection library meant to locate peaks and valleys in a signal.
+Version: @PROJECT_VERSION@
+URL: https://github.com/jchristopherson/peaks
+Libs: -L${libdir} -l@PROJECT_NAME@
+Cflags: -I${includedir}
