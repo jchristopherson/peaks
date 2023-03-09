@@ -12,6 +12,9 @@ program main
     local = test_peak_detect_r32()
     if (.not.local) overall = .false.
 
+    local = test_peak_detect_r64()
+    if (.not.local) overall = .false.
+
     ! End
     if (.not.overall) stop 1
 end program

@@ -35,9 +35,9 @@ if (BUILD_TESTING)
     add_subdirectory(tests)
 endif()
 
-# # Examples
-# option(BUILD_PEAKS_EXAMPLES "Build PEAKS examples")
-# message(STATUS "Build PEAKS examples: ${BUILD_PEAKS_EXAMPLES}")
-# if (BUILD_PEAKS_EXAMPLES)
-#     add_subdirectory(examples)
-# endif()
+# Examples
+option(BUILD_PEAKS_EXAMPLES "Build PEAKS examples")
+message(STATUS "Build PEAKS examples: ${BUILD_PEAKS_EXAMPLES}")
+if (BUILD_PEAKS_EXAMPLES)
+    add_subdirectory(examples)
+endif()

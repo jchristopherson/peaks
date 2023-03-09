@@ -1,11 +1,3 @@
-# peaks
-PEAKS is a peak detection library meant to locate peaks and valleys in a signal.  This library works on both smooth data and on noisy data where other routines, especially those that rely upon derivatives, have difficulties.  This library contains routines that are a re-implementation of the peak detection routine presented by Eli Billauer, which can be found [here](http://billauer.co.il/peakdet.html).
-
-
-The following graph illustrates the example presented by Eli Billauer, and shows the ability of the library to locate the local maxima and minima, even in the presence of noise.
-![](images/example_1.png?raw=true)
-
-```fortran
 program example
     use iso_fortran_env
     use peaks
@@ -66,4 +58,3 @@ program example
 
     call plt%draw()
 end program
-```
