@@ -20,20 +20,20 @@ add_fortran_library(
     ${CMAKE_INSTALL_INCLUDEDIR}
     ${PROJECT_VERSION}
     ${PROJECT_VERSION_MAJOR}
-    ${FSTATS_SOURCES}
+    ${PEAKS_SOURCES}
 )
 
 # Installation
 add_subdirectory(install)
 
-# # Testing
-# option(BUILD_TESTING "Build tests")
-# include(CTest)
-# message(STATUS "Build tests: ${BUILD_TESTING}")
-# if (BUILD_TESTING)
-#     enable_testing()
-#     add_subdirectory(tests)
-# endif()
+# Testing
+option(BUILD_TESTING "Build tests")
+include(CTest)
+message(STATUS "Build tests: ${BUILD_TESTING}")
+if (BUILD_TESTING)
+    enable_testing()
+    add_subdirectory(tests)
+endif()
 
 # # Examples
 # option(BUILD_PEAKS_EXAMPLES "Build PEAKS examples")
