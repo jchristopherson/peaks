@@ -1,0 +1,21 @@
+name = "peaks"
+author = "Jason Christopherson"
+maintainer = "Jason Christopherson"
+license = "GPL-3.0"
+description = "PEAKS is a peak detection library meant to locate peaks and valleys in a signal."
+homepage = "https://github.com/jchristopherson/peaks"
+
+[build]
+auto-executables = true
+auto-examples = true
+auto-tests = true
+
+[library]
+source-dir = "src"
+
+[dependencies]
+fortran_test_helper.git = "https://github.com/jchristopherson/fortran_test_helper"
+fortran_test_helper.branch = "main"
+
+[install]
+library = true

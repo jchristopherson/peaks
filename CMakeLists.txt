@@ -32,7 +32,7 @@ include(CTest)
 message(STATUS "Build tests: ${BUILD_TESTING}")
 if (BUILD_TESTING)
     enable_testing()
-    add_subdirectory(tests)
+    add_subdirectory(test)
 endif()
 
 # Examples
