@@ -7,7 +7,7 @@ PEAKS is a peak detection library meant to locate peaks and valleys in a signal.
 ## Building PEAKS
 This library can be built using CMake.  For instructions see [Running CMake](https://cmake.org/runningcmake/).
 
-
+## Example
 The following graph illustrates the example presented by Eli Billauer, and shows the ability of the library to locate the local maxima and minima, even in the presence of noise.
 ![](images/example_1.png?raw=true)
 
