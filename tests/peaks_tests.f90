@@ -15,7 +15,7 @@ program main
 
     local = test_peak_detect_r64(flag)
     if (.not.local) overall = .false.
-    flag = 2 * flag
+    flag = 10 * flag
 
     ! End
     if (.not.overall) stop flag
