@@ -5,8 +5,16 @@ PEAKS is a peak detection library meant to locate peaks and valleys in a signal.
 [![CMake](https://github.com/jchristopherson/peaks/actions/workflows/cmake.yml/badge.svg)](https://github.com/jchristopherson/peaks/actions/workflows/cmake.yml)
 [![FPM](https://github.com/jchristopherson/peaks/actions/workflows/fpm.yml/badge.svg)](https://github.com/jchristopherson/peaks/actions/workflows/fpm.yml)
 
-## Building PEAKS
+## Building PEAKS with CMake
 This library can be built using CMake.  For instructions see [Running CMake](https://cmake.org/runningcmake/).
+
+## Building PEAKS with FPM
+This library can be built using Fortran Package Manager (fpm) using the supplied `fpm.toml`.
+```bash
+fpm build
+fpm test --list
+fpm test <test_name, see `fpm.toml` or list>
+```
 
 ## Documentation
 The documentation can be found [here](https://jchristopherson.github.io/peaks/).
