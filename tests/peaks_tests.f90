@@ -4,17 +4,19 @@ program main
 
     ! Local Variables
     logical :: local, overall
+    integer(int32) :: flag
 
     ! Initialization
     overall = .true.
 
     ! Tests
-    local = test_peak_detect_r32()
+    local = test_peak_detect_r32(flag)
     if (.not.local) overall = .false.
 
-    local = test_peak_detect_r64()
+    local = test_peak_detect_r64(flag)
     if (.not.local) overall = .false.
+    flag = 2 * flag
 
     ! End
-    if (.not.overall) stop 1
+    if (.not.overall) stop flag
 end program

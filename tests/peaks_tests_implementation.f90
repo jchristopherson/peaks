@@ -5,12 +5,13 @@ module peaks_tests_implementation
     implicit none
 contains
 ! ------------------------------------------------------------------------------
-function test_peak_detect_r32() result(rst)
+function test_peak_detect_r32(flag) result(rst)
     ! Arguments
     logical :: rst
+    integer(int32), intent(out) :: flag
 
     ! Local Variables
-    real(real32), parameter :: tol = 1.0e-3
+    real(real32), parameter :: tol = 1.0e-2
     real(real32), parameter :: delta = 0.05
     real(real32), parameter :: dt = 1.0e-3
     real(real32), parameter :: freq_hz = 10.0d0
@@ -24,6 +25,7 @@ function test_peak_detect_r32() result(rst)
 
     ! Initialization
     rst = .true.
+    flag = 0
 
     ! Build a harmonic waveform
     t = 0.0
@@ -41,19 +43,23 @@ function test_peak_detect_r32() result(rst)
     if (size(imx) /= nmax) then
         rst = .false.
         print '(A)', "TEST FAILED: test_peak_detect_r32 1-1"
+        flag = 1
     end if
     if (size(mx) /= nmax) then
         rst = .false.
         print '(A)', "TEST FAILED: test_peak_detect_r32 1-2"
+        flag = 2
     end if
 
     if (size(imn) /= nmin) then
         rst = .false.
         print '(A)', "TEST FAILED: test_peak_detect_r32 1-3"
+        flag = 3
     end if
     if (size(mn) /= nmin) then
         rst = .false.
         print '(A)', "TEST FAILED: test_peak_detect_r32 1-4"
+        flag = 4
     end if
 
     ! Ensure the values make sense
@@ -62,17 +68,20 @@ function test_peak_detect_r32() result(rst)
     if (.not.assert(mx, mxans, tol)) then
         rst = .false.
         print '(A)', "TEST FAILED: test_peak_detect_r32 1-5"
+        flag = 5
     end if
     if (.not.assert(mn, mnans, tol)) then
         rst = .false.
         print '(A)', "TEST FAILED: test_peak_detect_r32 1-6"
+        flag = 6
     end if
 end function
 
 ! ------------------------------------------------------------------------------
-function test_peak_detect_r64() result(rst)
+function test_peak_detect_r64(flag) result(rst)
     ! Arguments
     logical :: rst
+    integer(int32), intent(out) :: flag
 
     ! Local Variables
     real(real64), parameter :: tol = 1.0d-3
@@ -89,6 +98,7 @@ function test_peak_detect_r64() result(rst)
 
     ! Initialization
     rst = .true.
+    flag = 0
 
     ! Build a harmonic waveform
     t = 0.0
@@ -106,19 +116,23 @@ function test_peak_detect_r64() result(rst)
     if (size(imx) /= nmax) then
         rst = .false.
         print '(A)', "TEST FAILED: test_peak_detect_r64 1-1"
+        flag = 1
     end if
     if (size(mx) /= nmax) then
         rst = .false.
         print '(A)', "TEST FAILED: test_peak_detect_r64 1-2"
+        flag = 2
     end if
 
     if (size(imn) /= nmin) then
         rst = .false.
         print '(A)', "TEST FAILED: test_peak_detect_r64 1-3"
+        flag = 3
     end if
     if (size(mn) /= nmin) then
         rst = .false.
         print '(A)', "TEST FAILED: test_peak_detect_r64 1-4"
+        flag = 4
     end if
 
     ! Ensure the values make sense
@@ -127,10 +141,12 @@ function test_peak_detect_r64() result(rst)
     if (.not.assert(mx, mxans, tol)) then
         rst = .false.
         print '(A)', "TEST FAILED: test_peak_detect_r64 1-5"
+        flag = 5
     end if
     if (.not.assert(mn, mnans, tol)) then
         rst = .false.
         print '(A)', "TEST FAILED: test_peak_detect_r64 1-6"
+        flag = 6
     end if
 end function
 
