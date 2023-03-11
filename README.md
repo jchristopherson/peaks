@@ -3,6 +3,7 @@ PEAKS is a peak detection library meant to locate peaks and valleys in a signal.
 
 ## Status
 [![CMake](https://github.com/jchristopherson/peaks/actions/workflows/cmake.yml/badge.svg)](https://github.com/jchristopherson/peaks/actions/workflows/cmake.yml)
+[![FPM](https://github.com/jchristopherson/peaks/actions/workflows/fpm.yml/badge.svg)](https://github.com/jchristopherson/peaks/actions/workflows/fpm.yml)
 
 ## Building PEAKS
 This library can be built using CMake.  For instructions see [Running CMake](https://cmake.org/runningcmake/).
