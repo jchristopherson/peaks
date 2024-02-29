@@ -23,9 +23,6 @@ add_fortran_library(
     ${PEAKS_SOURCES}
 )
 
-# Installation
-add_subdirectory(install)
-
 # Testing
 option(BUILD_TESTING "Build tests")
 include(CTest)
