@@ -4,7 +4,6 @@ set(dir ${CMAKE_CURRENT_SOURCE_DIR})
 # Define the source files
 set(PEAKS_SOURCES
     ${dir}/peaks.f90
-    ${dir}/peaks_implementation.f90
 )
 
 add_library(${PROJECT_NAME} ${PEAKS_SOURCES})
