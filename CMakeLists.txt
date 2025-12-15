@@ -3,24 +3,22 @@ cmake_minimum_required(VERSION 3.24)
 project(
     peaks
     LANGUAGES Fortran
-    VERSION 1.0.0
+    VERSION 1.0.1
 )
-
-# Get helper macros and functions
-include("${PROJECT_SOURCE_DIR}/cmake/helper.cmake")
+set(CMAKE_Fortran_STANDARD 2018)
+set(CMAKE_Fortran_STANDARD_REQUIRED TRUE)
 
 # Confgiure everything
 add_subdirectory(configure)
 
 # Source
 add_subdirectory(src)
-add_fortran_library(
-    ${PROJECT_NAME}
-    ${PROJECT_INCLUDE_DIR}
-    ${CMAKE_INSTALL_INCLUDEDIR}
-    ${PROJECT_VERSION}
-    ${PROJECT_VERSION_MAJOR}
-    ${PEAKS_SOURCES}
+
+# Installation Instructions
+install(
+  EXPORT ${PROJECT_NAME}-targets
+  NAMESPACE ${PROJECT_NAME}::
+  DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}"
 )
 
 # Testing
