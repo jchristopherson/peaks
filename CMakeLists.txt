@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.24)
 project(
     peaks
     LANGUAGES Fortran
-    VERSION 1.0.1
+    VERSION 1.0.2
 )
 set(CMAKE_Fortran_STANDARD 2018)
 set(CMAKE_Fortran_STANDARD_REQUIRED TRUE)
