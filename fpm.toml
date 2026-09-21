@@ -1,7 +1,7 @@
 name = "peaks"
 author = "Jason Christopherson"
 maintainer = "Jason Christopherson"
-license = "GPL-3.0"
+license = "MIT"
 description = "PEAKS is a peak detection library meant to locate peaks and valleys in a signal."
 homepage = "https://github.com/jchristopherson/peaks"
 
